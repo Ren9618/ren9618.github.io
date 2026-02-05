@@ -23,8 +23,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Convert Images to WebP
-        run: npm run convert-webp
+      - name: Build (Convert WebP & Replace References)
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

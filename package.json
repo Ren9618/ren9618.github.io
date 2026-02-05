@@ -4,7 +4,9 @@
   "description": "My Futuristic Portfolio",
   "main": "index.js",
   "scripts": {
-    "convert-webp": "node scripts/convert-webp.js"
+    "convert-webp": "node scripts/convert-webp.js",
+    "replace-refs": "node scripts/replace-webp-refs.js",
+    "build": "npm run convert-webp && npm run replace-refs"
   },
   "dependencies": {
     "sharp": "^0.32.6",

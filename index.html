@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+    <header class="glass-header">
+        <div class="logo">PORTFOLIO</div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="WELCOME TO MY WORLD">WELCOME TO MY WORLD</h1>
+                <p>Creative / Developer / VRChat</p>
+                <a href="#works" class="cta-button">VIEW WORKS</a>
+            </div>
+            <div class="hero-visual">
+                <img src="./assets/images/hero_visual.png" alt="Main Character">
+            </div>
+        </section>
+
+        <section id="about" class="content-section glass-card">
+            <h2>ABOUT</h2>
+            <div class="about-header">
+                <h3 class="about-name">レイノ / Rayno</h3>
+                <p class="about-title">Technical Creator / Developer</p>
+                <p class="about-tagline">「デジタル空間に、機能と美学を実装する」</p>
+            </div>
+            <div class="about-content">
+                <p>日本在住。エンジニアリングとクリエイティブの境界を横断するテクニカルクリエイターです。</p>
+                <p>Windows / MacOS / Linux
+                    のクロスプラットフォーム環境を駆使し、VRChatでの「体験」を豊かにするため、システム開発からデザイン、運営まで幅広く手がけています。作りたいもののために手段を選ばない、マルチスタックな開発スタイルが特徴です。
+                </p>
+            </div>
+
+            <div class="about-skills">
+                <h4>Technical Stack</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">UDON / UdonSharp</span>
+                    <span class="skill-tag">Unity</span>
+                    <span class="skill-tag">Blender</span>
+                    <span class="skill-tag">GitHub Pages</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+
+            <div class="about-philosophy">
+                <h4>Philosophy & Interests</h4>
+                <p>Frutiger AeroやLiquid
+                    Glassが持つ「透明感・奥行き・未来への憧憬」といったデザイン哲学に強く影響を受けています。初音ミク・鏡音リンをはじめとする音楽カルチャーへのリスペクトを根底に持ち、技術とデザインを融合させた新しい表現を模索し続けています。
+                </p>
+            </div>
+        </section>
+
+        <section id="works" class="content-section glass-card">
+            <h2>WORKS</h2>
+            <div class="works-grid">
+                <div class="work-item featured">
+                    <span class="work-status current">Current</span>
+                    <h3>VRChat Event "あにあめもりあ"</h3>
+                    <p>Webデザイナー、3Dモデラー、およびイベント運営陣として参画。イベントの顔となるWebサイトの構築から、空間内の演出に関わるモデリングまでを担当しています。</p>
+                </div>
+                <div class="work-item">
+                    <span class="work-status active">Active</span>
+                    <h3>BOOTH / 3D Assets</h3>
+                    <p>アバターギミックやワールド用アセットを販売中。多機能スポーン管理システム、ヘイロー、キプフェルのさいふなど、実用性と独自のUI演出を兼ね備えたアイテムを制作しています。</p>
+                    <p class="work-partner">パートナー「てん」と共に、BOOTHショップ「ぽりごんレイテンシー」を運営中。</p>
+                    <div class="shop-links">
+                        <a href="https://ray9618.booth.pm/" target="_blank" rel="noopener" class="shop-button">
+                            <img src="./assets/images/Booth_logo_icon.svg" alt="BOOTH" class="shop-icon">
+                            My Shop
+                        </a>
+                        <a href="https://polygonlatency.booth.pm/" target="_blank" rel="noopener" class="shop-button">
+                            <img src="./assets/images/Booth_logo_icon.svg" alt="BOOTH" class="shop-icon">
+                            共同ショップ
+                        </a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-status active">Active</span>
+                    <h3>VRChat World</h3>
+                    <p>「0秒でV睡できるワールド」というコンセプトのワールドを公開中。7,000 Visitsを達成し、多くのユーザーに利用されています。</p>
+                    <div class="shop-links">
+                        <a href="https://vrchat.com/home/world/wrld_2dc4d31a-37fe-41a5-b888-39402b844837/info"
+                            target="_blank" rel="noopener" class="shop-button vrc-button">
+                            🌐 ワールドを見る
+                        </a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-status active">Active</span>
+                    <h3>Discord Bot</h3>
+                    <p>VoiceChannel Notification System - ボイスチャンネルへの参加・退出を通知するDiscord Botを開発・運用中。</p>
+                    <div class="shop-links">
+                        <a href="https://discord.com/oauth2/authorize?client_id=626812517427183650&permissions=8&integration_type=0&scope=bot"
+                            target="_blank" rel="noopener" class="shop-button discord-button">
+                            🤖 Botを招待
+                        </a>
+                    </div>
+                    <p class="legal-links">
+                        <a href="./terms-of-service.html">利用規約</a> ・
+                        <a href="./privacy-policy.html">プライバシーポリシー</a>
+                    </p>
+                </div>
+                <div class="work-item">
+                    <span class="work-status past">Past</span>
+                    <h3>初音ミクファンイベント PA担当</h3>
+                    <p>2024年に大阪・岐阜で開催された初音ミクファンメイドライブにて、PA（音響）担当として参加。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section glass-card">
+            <h2>CONTACT</h2>
+            <p>お仕事のご依頼やご相談はこちらから。</p>
+
+            <div class="contact-links">
+                <a href="mailto:ray961839@gmail.com" class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span class="contact-label">Email</span>
+                </a>
+
+                <a href="https://x.com/Ray_9618_2" target="_blank" rel="noopener" class="contact-item">
+                    <svg class="contact-icon twitter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
+                    </svg>
+                    <span class="contact-label">メイン</span>
+                </a>
+
+                <a href="https://x.com/Ray_9618_VRC" target="_blank" rel="noopener" class="contact-item">
+                    <svg class="contact-icon twitter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
+                    </svg>
+                    <span class="contact-label">VRChat</span>
+                </a>
+
+                <a href="https://x.com/PoriRayTen" target="_blank" rel="noopener" class="contact-item">
+                    <svg class="contact-icon twitter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
+                    </svg>
+                    <span class="contact-label">ぽりごんレイテンシー</span>
+                </a>
+
+                <a href="https://buymeacoffee.com/ray_9618" target="_blank" rel="noopener"
+                    class="contact-item support-item">
+                    <span class="contact-icon">☕</span>
+                    <span class="contact-label">Support</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

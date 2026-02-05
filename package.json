@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Futuristic Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "convert-webp": "node scripts/convert-webp.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6",
+    "glob": "^10.3.10"
+  }
+}

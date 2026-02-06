@@ -11,6 +11,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Hero Background Slideshow
+    const bgCurrent = document.querySelector('#hero-bg-current');
+    const bgNext = document.querySelector('#hero-bg-next');
+
+    if (bgCurrent && bgNext) {
+        const worldImages = [
+            './assets/images/world/world_1.png',
+            './assets/images/world/world_2.png',
+            './assets/images/world/world_3.png',
+            './assets/images/world/world_4.png',
+            './assets/images/world/world_5.png',
+            './assets/images/world/world_6.png',
+            './assets/images/world/world_7.png',
+            './assets/images/world/world_8.png',
+            './assets/images/world/world_9.png'
+        ];
+
+        let currentIndex = Math.floor(Math.random() * worldImages.length);
+        let isCurrentActive = true;
+
+        // 初期画像を設定
+        bgCurrent.style.backgroundImage = `url('${worldImages[currentIndex]}')`;
+        bgCurrent.classList.add('active');
+
+        // 背景切り替え関数
+        function switchBackground() {
+            // 次の画像をランダムに選択（現在と違うもの）
+            let nextIndex;
+            do {
+                nextIndex = Math.floor(Math.random() * worldImages.length);
+            } while (nextIndex === currentIndex && worldImages.length > 1);
+            currentIndex = nextIndex;
+
+            if (isCurrentActive) {
+                bgNext.style.backgroundImage = `url('${worldImages[currentIndex]}')`;
+                bgCurrent.classList.remove('active');
+                bgNext.classList.add('active');
+            } else {
+                bgCurrent.style.backgroundImage = `url('${worldImages[currentIndex]}')`;
+                bgNext.classList.remove('active');
+                bgCurrent.classList.add('active');
+            }
+            isCurrentActive = !isCurrentActive;
+        }
+
+        // 10秒ごとに背景を切り替え
+        setInterval(switchBackground, 10000);
+    }
+
     // Parallax effect for hero visual could be added here
 
     // Mobile Menu Toggle
@@ -95,13 +144,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let isPlayingMotion = false;
         let randomTimer = null;
+        const videoCache = new Map(); // 動画キャッシュ
 
         // 待機動画を通常ループで再生（シームレス）
         avatarBase.loop = true;
         avatarBase.play().catch(() => { }); // 自動再生エラーを無視
 
-        // モーション再生関数
-        function playMotion(src, returnToIdle = true) {
+        // 動画をフェッチしてBlob URLを取得（キャッシュ付き）
+        async function fetchVideo(src) {
+            if (videoCache.has(src)) {
+                return videoCache.get(src);
+            }
+            const response = await fetch(src);
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            videoCache.set(src, blobUrl);
+            return blobUrl;
+        }
+
+        // モーション再生関数（読み込み完了を待ってから再生）
+        async function playMotion(src, returnToIdle = true) {
             if (isPlayingMotion) return;
             isPlayingMotion = true;
 
@@ -111,22 +173,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 randomTimer = null;
             }
 
-            // ベース動画を非表示にしてモーションを表示
-            avatarBase.style.opacity = '0';
+            try {
+                // Blob URLを取得（1回だけダウンロード）
+                const blobUrl = await fetchVideo(src);
 
-            avatarMotion.src = src;
-            avatarMotion.load();
-            avatarMotion.play();
-            avatarMotion.classList.add('active');
+                avatarMotion.src = blobUrl;
 
-            avatarMotion.onended = () => {
-                avatarMotion.classList.remove('active');
-                avatarBase.style.opacity = '1';
+                // 読み込み完了を待ってから再生
+                avatarMotion.oncanplaythrough = () => {
+                    avatarMotion.oncanplaythrough = null;
+                    avatarBase.style.opacity = '0';
+                    avatarMotion.classList.add('active');
+                    avatarMotion.play();
+                };
+
+                avatarMotion.onended = () => {
+                    avatarMotion.classList.remove('active');
+                    avatarBase.style.opacity = '1';
+                    isPlayingMotion = false;
+                    if (returnToIdle) {
+                        scheduleRandomMotion();
+                    }
+                };
+            } catch (err) {
+                console.error('動画読み込みエラー:', err);
                 isPlayingMotion = false;
-                if (returnToIdle) {
-                    scheduleRandomMotion();
-                }
-            };
+                scheduleRandomMotion();
+            }
         }
 
         // ランダムモーションをスケジュール

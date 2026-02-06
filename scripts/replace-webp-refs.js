@@ -2,11 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const { globSync } = require('glob');
 
-// HTMLファイルとCSSファイルを検索
+// HTMLファイル、CSSファイル、JSファイルを検索
 const htmlFiles = globSync('**/*.html', { ignore: 'node_modules/**' });
 const cssFiles = globSync('**/*.css', { ignore: 'node_modules/**' });
+const jsFiles = globSync('assets/**/*.js', { ignore: 'node_modules/**' });
 
-const files = [...htmlFiles, ...cssFiles];
+const files = [...htmlFiles, ...cssFiles, ...jsFiles];
 
 if (files.length === 0) {
     console.log('処理するファイルが見つかりませんでした');

@@ -500,6 +500,15 @@ h2::after {
     box-shadow: 0 5px 15px rgba(88, 101, 242, 0.4);
 }
 
+.youtube-button {
+    background: #FF0000;
+}
+
+.youtube-button:hover {
+    background: #cc0000;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
 .legal-links {
     margin-top: 1rem;
     font-size: 0.8rem;

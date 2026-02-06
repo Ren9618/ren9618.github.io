@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (bgCurrent && bgNext) {
         const worldImages = [
-            './assets/images/world/world_1.png',
-            './assets/images/world/world_2.png',
-            './assets/images/world/world_3.png',
-            './assets/images/world/world_4.png',
-            './assets/images/world/world_5.png',
-            './assets/images/world/world_6.png',
-            './assets/images/world/world_7.png',
-            './assets/images/world/world_8.png',
-            './assets/images/world/world_9.png'
+            './assets/images/world/world_1.webp',
+            './assets/images/world/world_2.webp',
+            './assets/images/world/world_3.webp',
+            './assets/images/world/world_4.webp',
+            './assets/images/world/world_5.webp',
+            './assets/images/world/world_6.webp',
+            './assets/images/world/world_7.webp',
+            './assets/images/world/world_8.webp',
+            './assets/images/world/world_9.webp'
         ];
 
         let currentIndex = Math.floor(Math.random() * worldImages.length);

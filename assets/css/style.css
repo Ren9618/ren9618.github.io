@@ -248,6 +248,42 @@ nav a:hover {
     background: #ff8fa8;
 }
 
+/* Avatar Animation */
+.avatar-container {
+    position: relative;
+    width: 600px;
+    height: 750px;
+    cursor: pointer;
+}
+
+.avatar-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.5s ease;
+}
+
+.avatar-base {
+    z-index: 1;
+}
+
+.avatar-motion {
+    z-index: 2;
+    opacity: 0;
+}
+
+.avatar-motion.active {
+    opacity: 1;
+}
+
+.avatar-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
 .hero-visual {
     position: absolute;
     right: 5%;
@@ -377,6 +413,8 @@ h2::after {
     border-radius: 20px;
     font-size: 0.85rem;
     color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -487,8 +525,9 @@ h2::after {
 }
 
 .shop-icon {
-    width: 1.2rem;
+    width: auto;
     height: 1.2rem;
+    object-fit: contain;
 }
 
 .discord-button {
@@ -501,12 +540,12 @@ h2::after {
 }
 
 .youtube-button {
-    background: #FF0000;
+    background: #282828;
 }
 
 .youtube-button:hover {
-    background: #cc0000;
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+    background: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(40, 40, 40, 0.4);
 }
 
 .legal-links {

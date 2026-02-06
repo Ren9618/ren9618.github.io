@@ -115,9 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Avatar Animation System
     const avatarContainer = document.querySelector('#avatar-container');
     const avatarBase = document.querySelector('#avatar-base');
-    const avatarMotion = document.querySelector('#avatar-motion');
+    const avatarMotion1 = document.querySelector('#avatar-motion-1');
+    const avatarMotion2 = document.querySelector('#avatar-motion-2');
 
-    if (avatarContainer && avatarBase && avatarMotion) {
+    if (avatarContainer && avatarBase && avatarMotion1 && avatarMotion2) {
         // Safari/WebKit検出（HEVC Alpha対応）
         const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ||
             /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -144,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let isPlayingMotion = false;
         let randomTimer = null;
+        let currentMotionVideo = null; // 現在アクティブなモーション動画
         const videoCache = new Map(); // 動画キャッシュ
 
         // 待機動画を通常ループで再生（シームレス）
@@ -162,9 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return blobUrl;
         }
 
-        // モーション再生関数（読み込み完了を待ってから再生）
-        async function playMotion(src, returnToIdle = true) {
-            if (isPlayingMotion) return;
+        // モーション再生関数（クロスフェード対応）
+        async function playMotion(src, returnToIdle = true, forcePlay = false) {
+            // 強制再生でない場合、再生中は無視
+            if (isPlayingMotion && !forcePlay) return;
+
             isPlayingMotion = true;
 
             // ランダムタイマーを一時停止
@@ -173,24 +177,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 randomTimer = null;
             }
 
+            // 次に使うビデオ要素を決定（交互に使用）
+            const nextMotionVideo = (currentMotionVideo === avatarMotion1) ? avatarMotion2 : avatarMotion1;
+            const prevMotionVideo = currentMotionVideo;
+
             try {
                 // Blob URLを取得（1回だけダウンロード）
                 const blobUrl = await fetchVideo(src);
 
-                avatarMotion.src = blobUrl;
+                nextMotionVideo.src = blobUrl;
 
                 // 読み込み完了を待ってから再生
-                avatarMotion.oncanplaythrough = () => {
-                    avatarMotion.oncanplaythrough = null;
+                nextMotionVideo.oncanplaythrough = () => {
+                    nextMotionVideo.oncanplaythrough = null;
+
+                    // ベース動画を非表示
                     avatarBase.style.opacity = '0';
-                    avatarMotion.classList.add('active');
-                    avatarMotion.play();
+
+                    // 新しいモーションをフェードイン
+                    nextMotionVideo.classList.add('active');
+                    nextMotionVideo.play();
+
+                    // 前のモーションをフェードアウト
+                    if (prevMotionVideo) {
+                        prevMotionVideo.classList.remove('active');
+                        setTimeout(() => {
+                            prevMotionVideo.pause();
+                            prevMotionVideo.currentTime = 0;
+                        }, 300); // フェード後に停止
+                    }
+
+                    currentMotionVideo = nextMotionVideo;
                 };
 
-                avatarMotion.onended = () => {
-                    avatarMotion.classList.remove('active');
+                nextMotionVideo.onended = () => {
+                    nextMotionVideo.classList.remove('active');
                     avatarBase.style.opacity = '1';
                     isPlayingMotion = false;
+                    currentMotionVideo = null;
                     if (returnToIdle) {
                         scheduleRandomMotion();
                     }
@@ -211,10 +235,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }, delay);
         }
 
-        // クリックでアクションモーション再生
+        // クリックでアクションモーション再生（連打対応）
         avatarContainer.addEventListener('click', () => {
             const randomAction = actionMotions[Math.floor(Math.random() * actionMotions.length)];
-            playMotion(randomAction);
+            playMotion(randomAction, true, true); // forcePlay = true で連打対応
         });
 
         // 初回のランダムモーションをスケジュール

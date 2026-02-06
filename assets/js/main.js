@@ -69,22 +69,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const avatarMotion = document.querySelector('#avatar-motion');
 
     if (avatarContainer && avatarBase && avatarMotion) {
+        // Safari/WebKit検出（HEVC Alpha対応）
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ||
+            /iPad|iPhone|iPod/.test(navigator.userAgent);
+        const videoDir = isSafari ? './assets/hevc_alpha' : './assets/webm';
+        const videoExt = isSafari ? '.mov' : '.webm';
+
         // ランダム自動切り替え用モーション
         const randomMotions = [
-            './assets/webm/motion_1.webm',
-            './assets/webm/motion_2.webm',
-            './assets/webm/motion_3.webm',
-            './assets/webm/motion_4.webm',
-            './assets/webm/motion_5.webm'
+            `${videoDir}/motion_1${videoExt}`,
+            `${videoDir}/motion_2${videoExt}`,
+            `${videoDir}/motion_3${videoExt}`,
+            `${videoDir}/motion_4${videoExt}`,
+            `${videoDir}/motion_5${videoExt}`
         ];
 
         // クリック・ホバー用アクション
         const actionMotions = [
-            './assets/webm/action_1.webm',
-            './assets/webm/action_2.webm',
-            './assets/webm/action_3.webm',
-            './assets/webm/action_4.webm',
-            './assets/webm/action_5.webm'
+            `${videoDir}/action_1${videoExt}`,
+            `${videoDir}/action_2${videoExt}`,
+            `${videoDir}/action_3${videoExt}`,
+            `${videoDir}/action_4${videoExt}`,
+            `${videoDir}/action_5${videoExt}`
         ];
 
         let isPlayingMotion = false;
@@ -125,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ランダムモーションをスケジュール
         function scheduleRandomMotion() {
-            const delay = 10000 + Math.random() * 20000; // 10-30秒
+            const delay = 5000 + Math.random() * 10000; // 5-15秒
             randomTimer = setTimeout(() => {
                 const randomSrc = randomMotions[Math.floor(Math.random() * randomMotions.length)];
                 playMotion(randomSrc);

@@ -41,8 +41,14 @@
                 <p>Creative / Developer / VRChat</p>
                 <a href="#works" class="cta-button">VIEW WORKS</a>
             </div>
-            <div class="hero-visual">
-                <img src="./assets/images/hero_visual.png" alt="Main Character">
+            <div class="hero-visual avatar-container" id="avatar-container">
+                <!-- ベース動画（待機） -->
+                <video class="avatar-video avatar-base" id="avatar-base" autoplay muted playsinline>
+                    <source src="./assets/webm/idle.webm" type="video/webm">
+                </video>
+                <!-- モーション動画（クロスフェードで切り替え） -->
+                <video class="avatar-video avatar-motion" id="avatar-motion" muted playsinline>
+                </video>
             </div>
         </section>
 
@@ -63,15 +69,23 @@
             <div class="about-skills">
                 <h4>Technical Stack</h4>
                 <div class="skill-tags">
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">UDON / UdonSharp</span>
-                    <span class="skill-tag">Unity</span>
-                    <span class="skill-tag">Blender</span>
-                    <span class="skill-tag">GitHub Pages</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Git</span>
+                    <a href="https://ja.wikipedia.org/wiki/C_Sharp" target="_blank" rel="noopener"
+                        class="skill-tag">C#</a>
+                    <a href="https://ja.wikipedia.org/wiki/Python" target="_blank" rel="noopener"
+                        class="skill-tag">Python</a>
+                    <a href="https://ja.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener"
+                        class="skill-tag">Node.js</a>
+                    <a href="https://udonsharp.docs.vrchat.com/" target="_blank" rel="noopener" class="skill-tag">UDON /
+                        UdonSharp</a>
+                    <a href="https://ja.wikipedia.org/wiki/Unity_(ゲームエンジン)" target="_blank" rel="noopener"
+                        class="skill-tag">Unity</a>
+                    <a href="https://ja.wikipedia.org/wiki/Blender" target="_blank" rel="noopener"
+                        class="skill-tag">Blender</a>
+                    <a href="https://docs.github.com/ja/pages" target="_blank" rel="noopener" class="skill-tag">GitHub
+                        Pages</a>
+                    <a href="https://ja.wikipedia.org/wiki/Docker" target="_blank" rel="noopener"
+                        class="skill-tag">Docker</a>
+                    <a href="https://ja.wikipedia.org/wiki/Git" target="_blank" rel="noopener" class="skill-tag">Git</a>
                 </div>
             </div>
 
@@ -140,7 +154,8 @@
                     <div class="shop-links">
                         <a href="https://www.youtube.com/@ray_9618" target="_blank" rel="noopener"
                             class="shop-button youtube-button">
-                            ▶️ YouTubeチャンネル
+                            <img src="./assets/images/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png"
+                                alt="YouTube" class="shop-icon"> YouTubeチャンネル
                         </a>
                     </div>
                 </div>

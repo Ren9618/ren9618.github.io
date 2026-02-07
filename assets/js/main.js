@@ -112,6 +112,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Lightbox for Work Gallery
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const thumbnails = document.querySelectorAll('.work-thumbnail');
+
+    if (lightbox && lightboxImg && thumbnails.length > 0) {
+        // サムネイルクリックでライトボックスを開く
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                lightboxImg.src = thumb.src;
+                lightboxImg.alt = thumb.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // スクロール無効化
+            });
+        });
+
+        // オーバーレイクリックで閉じる
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // スクロール有効化
+        });
+
+        // Escapeキーで閉じる
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
     // Avatar Animation System
     const avatarContainer = document.querySelector('#avatar-container');
     const avatarBase = document.querySelector('#avatar-base');

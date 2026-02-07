@@ -251,12 +251,28 @@ nav a:hover {
     z-index: 2;
 }
 
+/* Hero Entrance Animation */
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-content h1 {
     font-family: var(--font-heading);
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1rem;
     color: var(--text-color);
+    opacity: 0;
+    animation: heroFadeUp 0.8s ease forwards;
+    animation-delay: 0.2s;
 }
 
 .hero-content p {
@@ -264,6 +280,9 @@ nav a:hover {
     margin-bottom: 2rem;
     color: #887a89;
     font-weight: 500;
+    opacity: 0;
+    animation: heroFadeUp 0.8s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .cta-button {
@@ -277,6 +296,9 @@ nav a:hover {
     transition: all 0.3s ease;
     border-radius: 50px;
     box-shadow: 0 5px 15px rgba(255, 158, 181, 0.4);
+    opacity: 0;
+    animation: heroFadeUp 0.8s ease forwards;
+    animation-delay: 0.8s;
 }
 
 .cta-button:hover {
@@ -286,11 +308,33 @@ nav a:hover {
 }
 
 /* Avatar Animation */
+@keyframes avatarSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .avatar-container {
-    position: relative;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
     width: 600px;
     height: 750px;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.avatar-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .avatar-video {
@@ -305,6 +349,7 @@ nav a:hover {
 
 .avatar-base {
     z-index: 1;
+    opacity: 1;
 }
 
 .avatar-motion {

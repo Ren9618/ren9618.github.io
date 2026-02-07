@@ -118,6 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const avatarMotion1 = document.querySelector('#avatar-motion-1');
     const avatarMotion2 = document.querySelector('#avatar-motion-2');
 
+    // アバター出現アニメーション
+    if (avatarContainer) {
+        setTimeout(() => {
+            avatarContainer.classList.add('show');
+        }, 400); // 0.4秒後に表示
+    }
+
     if (avatarContainer && avatarBase && avatarMotion1 && avatarMotion2) {
         // Safari/WebKit検出（HEVC Alpha対応）
         const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ||

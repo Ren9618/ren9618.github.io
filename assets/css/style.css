@@ -551,6 +551,115 @@ h2::after {
     text-decoration: underline;
 }
 
+/* About Avatar */
+.about-avatar {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+}
+
+.about-avatar h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-heading);
+}
+
+.about-avatar p {
+    line-height: 1.7;
+}
+
+.about-avatar a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.about-avatar a:hover {
+    text-decoration: underline;
+}
+
+/* About History / Timeline */
+.about-history {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+}
+
+.about-history h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.history-timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--secondary-color);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0.75rem 0;
+    padding-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.timeline-item.highlight::before {
+    background: var(--primary-color);
+    width: 14px;
+    height: 14px;
+    left: -1.7rem;
+    box-shadow: 0 0 10px rgba(255, 158, 181, 0.5);
+}
+
+.timeline-item.current::before {
+    background: #4ade80;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+    }
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    min-width: 90px;
+}
+
+.timeline-event {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
 /* Workflow Section */
 .section-subtitle {
     text-align: center;

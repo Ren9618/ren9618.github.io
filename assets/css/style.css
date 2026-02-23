@@ -96,6 +96,21 @@ body {
     letter-spacing: 0.1rem;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
 /* Header Controls */
 .header-controls {
     display: flex;

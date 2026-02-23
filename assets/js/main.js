@@ -282,4 +282,36 @@ document.addEventListener('DOMContentLoaded', () => {
         // 初回のランダムモーションをスケジュール
         scheduleRandomMotion();
     }
+
+    // ヘッダーのスクロール表示/非表示（モバイル用）
+    const header = document.querySelector('.glass-header');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeader() {
+        const currentScrollY = window.scrollY;
+        const isMobile = window.innerWidth <= 768;
+
+        if (isMobile && currentScrollY > 100) {
+            if (currentScrollY > lastScrollY) {
+                // 下スクロール → ヘッダーを隠す
+                header.classList.add('header-hidden');
+            } else {
+                // 上スクロール → ヘッダーを表示
+                header.classList.remove('header-hidden');
+            }
+        } else {
+            header.classList.remove('header-hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    });
 });

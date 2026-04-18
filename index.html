@@ -32,12 +32,14 @@
         href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/branding/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="background-overlay"></div>
     <header class="glass-header">
-        <div class="logo">Rayno's Portfolio</div>
+        <div class="logo"><a href="#home"><img src="./assets/images/branding/logo.png" alt="Rayno's Portfolio"
+                    class="logo-img"></a></div>
 
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
@@ -150,8 +152,7 @@
 
             <div class="about-team">
                 <h4>👥 制作体制</h4>
-                <p>パートナー「<a href="https://x.com/5TenTen" target="_blank"
-                        rel="noopener">てん</a>」と共に、企画・デザインから技術実装まで一貫して対応できるユニット体制で活動しています。複数人での分業やチーム体制での受注にも柔軟に対応可能です。
+                <p>企画・デザインから技術実装まで一貫して対応できる個人体制で活動しています。複数人での分業やチーム体制での受注にも柔軟に対応可能です。
                 </p>
             </div>
 
@@ -195,10 +196,7 @@
                         <span class="timeline-date">2024/12/31</span>
                         <span class="timeline-event">Trusted User 達成 ⭐</span>
                     </div>
-                    <div class="timeline-item current">
-                        <span class="timeline-date">2025/2〜</span>
-                        <span class="timeline-event">「あにあめもりあ」運営・Webデザイナー・キャスト 🎪</span>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -206,21 +204,12 @@
         <section id="works" class="content-section glass-card">
             <h2>WORKS</h2>
             <div class="works-grid">
-                <div class="work-item featured">
-                    <span class="work-status current">Current</span>
-                    <h3>VRChat Event "あにあめもりあ"</h3>
-                    <p>Webデザイナー、3Dモデラー、およびイベント運営陣として参画。イベントの顔となるWebサイトの構築から、空間内の演出に関わるモデリングまでを担当しています。</p>
-                    <div class="shop-links">
-                        <a href="https://te74g.github.io/" target="_blank" rel="noopener" class="shop-button">
-                            🎪 イベントサイト
-                        </a>
-                    </div>
-                </div>
+
                 <div class="work-item">
                     <span class="work-status active">Active</span>
                     <h3>BOOTH / 3D Assets</h3>
                     <p>アバターギミックやワールド用アセットを販売中。多機能スポーン管理システム、ヘイロー、キプフェルのさいふなど、実用性と独自のUI演出を兼ね備えたアイテムを制作しています。</p>
-                    <p class="work-partner">パートナー「てん」と共に、BOOTHショップ「ぽりごんレイテンシー」を運営中。</p>
+
 
                     <div class="work-gallery">
                         <img src="./assets/images/works/rayno_shop/spawn_manager_1.png" alt="多機能スポーン管理システム"
@@ -231,10 +220,7 @@
                             class="work-thumbnail">
                         <img src="./assets/images/works/rayno_shop/vrc_emote_1.png" alt="標準VRCEmote（無料）"
                             class="work-thumbnail free">
-                        <img src="./assets/images/works/polygon_latency/zodiac_hairpin_1.png" alt="十二支ヘアピン"
-                            class="work-thumbnail">
-                        <img src="./assets/images/works/polygon_latency/dragon_scale_hairpin_1.png" alt="龍鱗ヘアピン（無料）"
-                            class="work-thumbnail free">
+
                     </div>
 
                     <div class="shop-links">
@@ -242,10 +228,7 @@
                             <img src="./assets/images/Booth_logo_icon.svg" alt="BOOTH" class="shop-icon">
                             My Shop
                         </a>
-                        <a href="https://polygonlatency.booth.pm/" target="_blank" rel="noopener" class="shop-button">
-                            <img src="./assets/images/Booth_logo_icon.svg" alt="BOOTH" class="shop-icon">
-                            共同ショップ
-                        </a>
+
                     </div>
                 </div>
                 <div class="work-item">
@@ -533,13 +516,7 @@
                     <span class="contact-label">VRChat</span>
                 </a>
 
-                <a href="https://x.com/PoriRayTen" target="_blank" rel="noopener" class="contact-item">
-                    <svg class="contact-icon twitter-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
-                    </svg>
-                    <span class="contact-label">ぽりごんレイテンシー</span>
-                </a>
+
 
                 <a href="https://buymeacoffee.com/ray_9618" target="_blank" rel="noopener"
                     class="contact-item support-item">

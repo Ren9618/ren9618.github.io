@@ -1,0 +1,10 @@
+【レイノのショップ】
+https://ray9618.booth.pm/items/7199250 「キプフェルのさいふ！」 2025/07/21 Ver.1.0 公開
+https://ray9618.booth.pm/items/7179172 「MAで簡単実装！標準VRCEmote！」 日にちは忘れた、25年5月ごろ？SDKのバージョンがVRChat SDK 3.8.1だからそのあたり
+https://ray9618.booth.pm/items/7575607　「動く！キューブヘイロー！」　2025/10/26 Ver.1.0 初期バージョン
+https://ray9618.booth.pm/items/7946744　「多機能スポーン管理システム」　2026/02/04（JST） Ver.1.0
+【ぽりごんレイテンシー】（共同ショップ）
+https://polygonlatency.booth.pm/items/7893801　「龍鱗ヘアピン」　2026/1/19 公開開始
+https://polygonlatency.booth.pm/items/7889392　「十二支ヘアピン」　2026/1/19 販売開始
+【Discord Bot】
+https://discord.com/api/oauth2/authorize?client_id=626812517427183650&permissions=8&scope=bot　「VoiceChannel Notification System」 2021/06/05 Ver.0.1(First) 初期バージョン 最新版：2025/12/12 Ver.5.0

@@ -1,2 +1,4 @@
 # 検証用アーティファクト（レポート・スクリーンショット等）はサイトに公開しない
 verification/
+.DS_Store
+node_modules/

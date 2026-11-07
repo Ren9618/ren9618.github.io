@@ -26,6 +26,11 @@ jobs:
       - name: Build (Convert WebP & Replace References)
         run: npm run build
 
+      - name: Remove Non-Site Files (Deploy Exclusions)
+        run: |
+          rm -f package.json package-lock.json .gitignore
+          rm -rf scripts node_modules .github
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

@@ -1639,6 +1639,14 @@ h2::after {
     background: #5449ff;
 }
 
+.support-feedback {
+    background: var(--primary-color);
+}
+
+.support-feedback:hover {
+    background: #ff8fa8;
+}
+
 .support-note {
     text-align: center;
     font-size: 0.82rem;

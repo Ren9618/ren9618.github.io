@@ -18,7 +18,7 @@
         content="ソフトウェアの企画・開発および販売。主力製品はYouTube／ニコニコ動画／BiliBili／TikTok対応の動画ダウンローダー「Megrab Studio」（macOS / Windows / Android）。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ren9618.github.io/">
-    <meta property="og:image" content="https://ren9618.github.io/assets/images/megrab/ogp.png">
+    <meta property="og:image" content="https://ren9618.github.io/assets/images/megrab/ogp.webp">
     <meta property="og:site_name" content="レイノワークス">
     <meta property="og:locale" content="ja_JP">
 
@@ -28,21 +28,20 @@
     <meta name="twitter:title" content="レイノワークス | ソフトウェアの企画・開発・販売">
     <meta name="twitter:description"
         content="ソフトウェアの企画・開発および販売。主力製品はmacOS / Windows / Android対応の動画ダウンローダー「Megrab Studio」。">
-    <meta name="twitter:image" content="https://ren9618.github.io/assets/images/megrab/ogp.png">
+    <meta name="twitter:image" content="https://ren9618.github.io/assets/images/megrab/ogp.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=M+PLUS+Rounded+1c:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261111a">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261117a">
     <link rel="icon" href="./assets/images/branding/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="background-overlay"></div>
-    <header class="glass-header">
-        <div class="logo"><a href="#home"><img src="./assets/images/branding/logo.png" alt="レイノワークス"
+    <header class="site-header">
+        <div class="logo"><a href="./index.html"><img src="./assets/images/branding/logo.webp" alt="レイノワークス"
                     class="logo-img"></a></div>
 
         <div class="menu-toggle" id="mobile-menu">
@@ -53,124 +52,45 @@
 
         <nav class="nav-menu">
             <ul>
-                <li><a href="#home">HOME</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#about">ABOUT</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="#news">NEWS</a></li>
-                <li><a href="#feedback">FEEDBACK</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#journal">JOURNAL</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- ヒーロー: 事業の顔 -->
+        <!-- HERO -->
         <section id="home" class="hero-section">
-            <!-- 背景画像（ぼかし + オーバーレイ） -->
-            <div class="hero-background" id="hero-background">
-                <div class="hero-bg-image" id="hero-bg-current"></div>
-                <div class="hero-bg-image" id="hero-bg-next"></div>
-                <div class="hero-bg-overlay"></div>
-            </div>
-            <div class="hero-content">
-                <p class="hero-kicker">RAYNO WORKS</p>
-                <h1>レイノワークス<span class="hero-sub">ソフトウェアの企画・開発および販売</span></h1>
-                <p>主力製品は動画ダウンローダー「Megrab Studio」。YouTube / ニコニコ動画 / BiliBili / TikTok に対応し、macOS / Windows
-                    / Android 向けに 2026 年 11 月 6 日に発売しました。</p>
-                <div class="hero-buttons">
-                    <a href="https://megrab.mikumiku.online" target="_blank" rel="noopener" class="cta-button">Megrab
-                        Studio 公式サイト →</a>
-                    <a href="#works" class="cta-button cta-ghost">WORKS を見る</a>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <p class="hero-kicker">RAYNO WORKS</p>
+                    <h1>毎日に、ちょうどいいソフトウェアを。</h1>
+                    <p class="hero-lead">ソフトウェアの企画・開発・販売を行う個人事業「レイノワークス」の公式サイト。主力製品は macOS / Windows / Android
+                        対応の動画ダウンローダー「Megrab Studio」。</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="cta-button">製品を見る</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-product">
-                <img src="./assets/images/megrab/hero-download-dark.png"
-                    alt="Megrab Studio（Windows版）の動画ダウンロード画面" width="1264" height="711" loading="eager" decoding="async">
+                <div class="hero-product">
+                    <img class="product-shot product-shot-dark" src="./assets/images/megrab/hero-download-dark.webp"
+                        alt="Megrab Studio（Windows版）の動画ダウンロード画面" width="1264" height="711" loading="eager"
+                        decoding="async">
+                    <img class="product-shot product-shot-light" src="./assets/images/megrab/hero-download-light.webp"
+                        alt="Megrab Studio（Windows版）の動画ダウンロード画面" width="1264" height="711" loading="eager"
+                        decoding="async">
+                </div>
             </div>
         </section>
 
-        <!-- ABOUT: 事業者紹介 -->
-        <section id="about" class="content-section glass-card">
-            <h2>ABOUT</h2>
-            <div class="about-header">
-                <h3 class="about-name">レイノワークス<span class="about-name-en">Rayno Works</span></h3>
-                <p class="about-title">個人事業主 — 2026 年 10 月 25 日開業</p>
-                <p class="about-tagline">ソフトウェアの企画・開発および販売</p>
-            </div>
-            <div class="about-content">
-                <p>レイノワークスは、代表レイノが個人事業主として開業したソフトウェアブランドです。主力製品の動画ダウンローダー「Megrab Studio」をはじめ、macOS / Windows
-                    / Android 向けのソフトウェアを自ら企画・開発し、販売・運用まで行っています。</p>
-                <p>開発スタイルは、課題の言語化と AI エージェントの活用。仕様の決定・要件定義・検収を本人が担い、実装を AI
-                    エージェントと協働で進めることで、個人として複数プラットフォーム向けの製品を並行して開発・運用しています。開発体制については Zenn でも公開しています。</p>
-            </div>
+        <!-- PRODUCTS -->
+        <section id="products" class="content-section">
+            <h2>PRODUCTS</h2>
 
-            <div class="about-skills">
-                <h4>Skills and Stack</h4>
-
-                <!-- ネイティブ / モバイル -->
-                <div class="skill-category">
-                    <h5>🧩 Native / Mobile</h5>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Swift / SwiftUI（macOS）</span>
-                        <span class="skill-tag">C# / .NET・WinUI 3（Windows）</span>
-                        <span class="skill-tag">Kotlin / Jetpack Compose（Android）</span>
-                    </div>
-                </div>
-
-                <!-- Web -->
-                <div class="skill-category">
-                    <h5>🌐 Web</h5>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML / CSS / JavaScript</span>
-                    </div>
-                </div>
-
-                <!-- 事業インフラ -->
-                <div class="skill-category">
-                    <h5>⚙️ Product Ops / Infra</h5>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Stripe（決済・サブスクリプション）</span>
-                        <span class="skill-tag">Docker / Linux サーバー運用</span>
-                        <span class="skill-tag">Git / GitHub</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-links">
-                <h4>Links</h4>
-                <ul>
-                    <li><a href="https://x.com/Rayno_works" target="_blank" rel="noopener">公式 X（@Rayno_works）</a><span
-                            class="link-note"> — 製品情報・サポート</span></li>
-                    <li><a href="https://x.com/Ray_9618_2" target="_blank" rel="noopener">個人 X（@Ray_9618_2）</a><span
-                            class="link-note"> — 個人アカウントのため、製品の宣伝・サポートは行っていません</span></li>
-                    <li><a href="https://github.com/Ren9618" target="_blank" rel="noopener">GitHub（@Ren9618）</a><span
-                            class="link-note"> — オープンソース・開発リポジトリ</span></li>
-                    <li><a href="https://zenn.dev/ray_9618" target="_blank" rel="noopener">Zenn（@ray_9618）</a><span
-                            class="link-note"> — 開発記事を週 2 本ペースで公開中</span></li>
-                    <li><a href="https://note.com/rayno_works" target="_blank" rel="noopener">公式 note（@rayno_works）</a><span
-                            class="link-note"> — 製品のお知らせ・開発の裏側</span></li>
-                    <li><a href="https://github.com/sponsors/Ren9618" target="_blank"
-                            rel="noopener">GitHub Sponsors</a> / <a href="https://buy.stripe.com/5kQ9AU8Xva8T7tAbnj67S00"
-                            target="_blank" rel="noopener">Stripe 寄付</a><span class="link-note"> — 開発支援は <a
-                                href="#support">SUPPORT</a> セクションへ</span></li>
-                </ul>
-            </div>
-
-            <div class="about-philosophy">
-                <h4>Philosophy</h4>
-                <p>Frutiger Aero や Liquid Glass が持つ「透明感・奥行き・未来への憧憬」をデザインの基調に据え、音楽カルチャーへのリスペクトを根底に持ちながら、技術とデザインを融合させたソフトウェアづくりを続けています。
-                </p>
-            </div>
-        </section>
-
-        <!-- WORKS: 事業の作品 -->
-        <section id="works" class="content-section glass-card">
-            <h2>WORKS</h2>
-
-            <div class="works-grid">
-                <!-- 主力製品 -->
-                <div class="work-item featured">
+            <!-- 主力（有料） -->
+            <div class="products-featured">
+                <article class="product-card featured">
                     <div class="featured-main">
                         <div class="featured-copy">
                             <span class="work-status flagship">主力製品・発売中</span>
@@ -195,22 +115,18 @@
                         </div>
                         <div class="featured-shot">
                             <img class="product-shot product-shot-dark"
-                                src="./assets/images/megrab/hero-download-dark.png"
+                                src="./assets/images/megrab/hero-download-dark.webp"
                                 alt="Megrab Studio（Windows版）の動画ダウンロード画面" width="1264" height="711" loading="lazy"
                                 decoding="async">
                             <img class="product-shot product-shot-light"
-                                src="./assets/images/megrab/hero-download-light.png"
+                                src="./assets/images/megrab/hero-download-light.webp"
                                 alt="Megrab Studio（Windows版）の動画ダウンロード画面" width="1264" height="711" loading="lazy"
                                 decoding="async">
                         </div>
                     </div>
-                    <p class="work-note-legal">取得するコンテンツの著作権その他の権利は、それぞれの権利者に帰属します。「YouTube」は Google LLC
-                        の商標、「ニコニコ動画」は株式会社ドワンゴの商標または登録商標、「bilibili」は上海幻電信息科技有限公司の商標、「TikTok」は ByteDance Ltd.
-                        の商標です。Megrab Studio はこれらの企業・サービス提供者と提携・公認・後援関係にありません。</p>
-                </div>
+                </article>
 
-                <!-- 2つ目の有料製品 -->
-                <div class="work-item featured">
+                <article class="product-card featured">
                     <div class="featured-main">
                         <div class="featured-copy">
                             <span class="work-status flagship">発売中</span>
@@ -233,17 +149,17 @@
                             </div>
                         </div>
                         <div class="featured-shot">
-                            <img class="product-shot" src="./assets/images/yohaku/screenshot-main.png"
+                            <img class="product-shot" src="./assets/images/yohaku/screenshot-main.webp"
                                 alt="Yohaku（よはく）のメイン画面（カテゴリ別の容量表示）" width="1280" height="800"
                                 loading="lazy" decoding="async">
                         </div>
                     </div>
-                    <p class="work-note-legal">「Steam」は Valve Corporation の商標、「Epic Games」は Epic Games, Inc. の商標、「GOG」は GOG sp. z o.o.
-                        の商標、「Riot Games」は Riot Games, Inc. の商標です。Yohaku はこれらの企業・サービス提供者と提携・公認・後援関係にありません。</p>
-                </div>
+                </article>
+            </div>
 
-                <!-- 無料・OSS -->
-                <div class="work-item">
+            <!-- 無料・OSS -->
+            <div class="products-free">
+                <article class="product-card">
                     <span class="work-status free">無料・OSS</span>
                     <h3>Hodozip</h3>
                     <p>Windows 向けのアーカイブ解凍・圧縮ソフト。ダブルクリックでその場に解凍する往年のアーカイバ風の操作感で、解凍は 13 形式に対応。ZIP / 7z
@@ -257,16 +173,16 @@
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLScFpnTH8fFGBcCQfoNoN7O-mGnPb1u8aLhShMMQZ8uFLxQ9GQ/viewform"
                             target="_blank" rel="noopener" class="shop-button github-button">フィードバック</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="work-item">
+                <article class="product-card">
                     <span class="work-status free">無料・OSS</span>
                     <h3>MacUtl</h3>
                     <p>AviUtl 風の動画編集ソフト「NeoUtl」を macOS に移植した非公式フォーク。プレビュー／タイムライン／プロパティを 1
                         つのウィンドウに集約したレイアウトで、日本語 IME に対応しています。2026 年 11 月 12 日公開。対応環境は macOS 27.0
                         以降・Apple Silicon のみ。ベースの NeoUtl がプレアルファ版のため、発展途上のソフトです。AGPL-3.0 ライセンス。</p>
                     <div class="featured-shot">
-                        <img class="product-shot" src="./assets/images/macutl/macutl-main.png"
+                        <img class="product-shot" src="./assets/images/macutl/macutl-main.webp"
                             alt="MacUtl のメイン画面（プレビュー・プロパティ・タイムラインを 1 つのウィンドウに集約）"
                             width="2144" height="1568" loading="lazy" decoding="async">
                     </div>
@@ -276,98 +192,43 @@
                         <a href="https://github.com/Ren9618/MacUtl/issues" target="_blank" rel="noopener"
                             class="shop-button github-button">フィードバック</a>
                     </div>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-status free">無料</span>
-                    <h3>Nagara（ながら）</h3>
-                    <p>メディアキーの操作対象アプリを固定するユーティリティ（macOS / Windows）。macOS 版 v0.1.0 を GitHub Releases で公開中。MIT
-                        ライセンス。</p>
-                    <div class="shop-links">
-                        <a href="https://github.com/Ren9618/Nagara" target="_blank" rel="noopener"
-                            class="shop-button github-button">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-status oss">OSS</span>
-                    <h3>pixiv-bookmarks</h3>
-                    <p>pixiv ブックマークのダウンローダーとビューア。自分でサーバーを立てて使える自己ホスト型で、複数アカウントに対応。MIT ライセンス。</p>
-                    <div class="shop-links">
-                        <a href="https://github.com/Ren9618/pixiv-bookmarks" target="_blank" rel="noopener"
-                            class="shop-button github-button">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-status free">無料・Web ツール</span>
-                    <h3>AI 依存度チェッカー</h3>
-                    <p>AI ツールとの付き合い方を 10 の質問で診断する無料の Web ツール。結果は 4 段階のランクで表示され、そのままシェアできます。</p>
-                    <div class="shop-links">
-                        <a href="https://check.mikumiku.online" target="_blank" rel="noopener"
-                            class="shop-button">使ってみる →</a>
-                    </div>
-                </div>
-
-                <div class="work-item">
-                    <span class="work-status oss">OSS活動</span>
-                    <h3>Windhawk 向け Mod</h3>
-                    <p>タスクバーの表示領域を確保する Mod『Taskbar Margin』を開発し、Windhawk 公式 Mod
-                        リポジトリへ統合されました。2026 年 11 月 12 日には、右側配置オプションなどを含む v1.1
-                        へのカタログ更新もマージされています。Windows カスタマイズまわりのクラッシュ解析などの知見は Zenn で公開しています。</p>
-                    <div class="shop-links">
-                        <a href="https://github.com/Ren9618" target="_blank" rel="noopener"
-                            class="shop-button github-button">GitHub →</a>
-                    </div>
-                </div>
+                </article>
             </div>
-        </section>
 
-        <!-- 開発スタイル -->
-        <section id="workflow" class="content-section glass-card">
-            <h2>HOW I WORK</h2>
-            <p class="section-subtitle">開発スタイル — 課題の言語化からリリース・運用まで</p>
-
-            <div class="workflow-steps">
-                <div class="workflow-step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">💬</div>
-                    <h4>課題の言語化</h4>
-                    <p>「どんな問題を、誰のために解くか」を言葉にして整理します</p>
-                </div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">📝</div>
-                    <h4>仕様・要件定義</h4>
-                    <p>仕様の決定と要件定義は本人が行います</p>
-                </div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">🤖</div>
-                    <h4>AI エージェント実装</h4>
-                    <p>実装を AI エージェントと協働で進め、開発を高速化します</p>
-                </div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-step">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">✅</div>
-                    <h4>検収・テスト</h4>
-                    <p>品質と挙動を本人が検収します</p>
-                </div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-step">
-                    <div class="step-number">5</div>
-                    <div class="step-icon">🚀</div>
-                    <h4>リリース・運用</h4>
-                    <p>販売・サポート・更新を継続して行います</p>
-                </div>
-            </div>
+            <!-- その他 -->
+            <ul class="products-list">
+                <li>
+                    <span class="list-name">Nagara（ながら）</span>
+                    <span class="list-desc">メディアキーの操作対象アプリを固定するユーティリティ（macOS / Windows）。macOS 版 v0.1.0 を GitHub
+                        Releases で公開中。MIT ライセンス。</span>
+                    <a href="https://github.com/Ren9618/Nagara" target="_blank" rel="noopener"
+                        class="list-link">GitHub →</a>
+                </li>
+                <li>
+                    <span class="list-name">pixiv-bookmarks</span>
+                    <span class="list-desc">pixiv ブックマークのダウンローダーとビューア。自分でサーバーを立てて使える自己ホスト型で、複数アカウントに対応。MIT
+                        ライセンス。</span>
+                    <a href="https://github.com/Ren9618/pixiv-bookmarks" target="_blank" rel="noopener"
+                        class="list-link">GitHub →</a>
+                </li>
+                <li>
+                    <span class="list-name">AI 依存度チェッカー</span>
+                    <span class="list-desc">AI ツールとの付き合い方を 10 の質問で診断する無料の Web ツール。結果は 4 段階のランクで表示され、そのままシェアできます。</span>
+                    <a href="https://check.mikumiku.online" target="_blank" rel="noopener"
+                        class="list-link">使ってみる →</a>
+                </li>
+                <li>
+                    <span class="list-name">Windhawk 向け Mod</span>
+                    <span class="list-desc">タスクバーの表示領域を確保する Mod『Taskbar Margin』を開発し、Windhawk 公式 Mod
+                        リポジトリへ統合。2026 年 11 月 12 日に v1.1 へのカタログ更新もマージされています。関連知見は Zenn で公開。</span>
+                    <a href="https://github.com/Ren9618" target="_blank" rel="noopener"
+                        class="list-link">GitHub →</a>
+                </li>
+            </ul>
         </section>
 
         <!-- NEWS -->
-        <section id="news" class="content-section glass-card">
+        <section id="news" class="content-section">
             <h2>NEWS</h2>
             <div class="news-list">
                 <div class="news-item">
@@ -388,220 +249,99 @@
                     <span class="news-title"><a href="https://note.com/rayno_works" target="_blank"
                             rel="noopener">公式 note を開設 — レイノワークス公式アカウント（@rayno_works）で製品のお知らせ・開発の裏側を発信</a></span>
                 </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.11</span>
-                    <span class="news-tag tag-release">Release</span>
-                    <span class="news-title"><a href="https://check.mikumiku.online" target="_blank"
-                            rel="noopener">AI 依存度チェッカーを公開 — 無料の Web ツール</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.10</span>
-                    <span class="news-tag tag-release">Release</span>
-                    <span class="news-title">有料コンテンツ 3 点を発売 — <a
-                            href="https://zenn.dev/ray_9618/books/selling-software-practice" target="_blank"
-                            rel="noopener">Zenn ブック「コードを書かずに商用ソフトを『販売できる状態』にする」¥1,000</a> / <a
-                            href="https://note.com/ray_9618/n/n509753caa506" target="_blank"
-                            rel="noopener">note 有料記事「Muse の使いこなし方 実践編」¥800</a> / <a
-                            href="https://coconala.com/contents_market/pictures/cmw9trr1w07sg6w0i5legyum4" target="_blank"
-                            rel="noopener">ココナラ「AI エージェント運用テンプレート集」¥1,000</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.09</span>
-                    <span class="news-tag tag-release">Release</span>
-                    <span class="news-title"><a href="https://ren9618.github.io/Yohaku/" target="_blank"
-                            rel="noopener">Yohaku（よはく）を発売 — Windows 向けディスク容量ビューアー</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.07</span>
-                    <span class="news-tag tag-update">Update</span>
-                    <span class="news-title"><a href="https://ren9618.github.io/Hodozip/" target="_blank"
-                            rel="noopener">Hodozip v0.6.1 を公開 — 圧縮機能・インストーラーを追加した v0.5.0 以降の最新版</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.07</span>
-                    <span class="news-tag tag-update">Update</span>
-                    <span class="news-title"><a href="https://ren9618.github.io/Hodozip/" target="_blank"
-                            rel="noopener">Hodozip v0.4.0 をリリース — 日本語 / English UI 追加、ZIP 並列解凍でより高速に</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.07</span>
-                    <span class="news-tag tag-release">Release</span>
-                    <span class="news-title"><a href="https://ren9618.github.io/Hodozip/" target="_blank"
-                            rel="noopener">Hodozip v0.3.0 をリリース — 7z / RAR / TAR 系など多形式に対応</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.07</span>
-                    <span class="news-tag tag-info">Info</span>
-                    <span class="news-title">サイトを全面更新 — 個人事業「レイノワークス」の活動と製品紹介へ刷新</span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.06</span>
-                    <span class="news-tag tag-release">Release</span>
-                    <span class="news-title"><a href="https://megrab.mikumiku.online" target="_blank"
-                            rel="noopener">主力製品「Megrab Studio」（macOS / Windows / Android 動画ダウンローダー）を発売</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.06</span>
-                    <span class="news-tag tag-info">Info</span>
-                    <span class="news-title"><a href="https://github.com/sponsors/Ren9618" target="_blank"
-                            rel="noopener">GitHub Sponsors が承認され、開発支援ページを公開</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.11.05</span>
-                    <span class="news-tag tag-blog">Blog</span>
-                    <span class="news-title"><a href="https://zenn.dev/ray_9618/articles/e91fbc33ce7153" target="_blank"
-                            rel="noopener">Zenn — WindhawkでExplorerがクラッシュを繰り返す — ダンプで見えた「レイアウト循環」と回避策</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.10.31</span>
-                    <span class="news-tag tag-blog">Blog</span>
-                    <span class="news-title"><a href="https://zenn.dev/ray_9618/articles/0c059170728325" target="_blank"
-                            rel="noopener">Zenn — 友人の「Macで信頼できるダウンローダーがない」から、その日のうちに作り始めた話</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.10.31</span>
-                    <span class="news-tag tag-blog">Blog</span>
-                    <span class="news-title"><a href="https://zenn.dev/ray_9618/articles/45f94464e2bf7a" target="_blank"
-                            rel="noopener">Zenn — 「開発版のみ」と書いただけでは機能は分かれない — Stable昇格で踏んだ地雷とChannelFeatureGateの設計</a></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2026.10.26</span>
-                    <span class="news-tag tag-blog">Blog</span>
-                    <span class="news-title"><a href="https://zenn.dev/ray_9618/articles/f7884033741464" target="_blank"
-                            rel="noopener">Zenn — コードをほぼ書かずに商用ソフトを作る：AIエージェントに開発を任せる体制と運用ルール</a></span>
-                </div>
             </div>
             <div class="news-more">
-                <p class="news-more-text">開発に関する記事を Zenn で週 2 本ペースで公開中。</p>
-                <a href="https://zenn.dev/ray_9618" target="_blank" rel="noopener" class="shop-button">Zenn
-                    ですべて見る →</a>
+                <p class="news-more-text">過去のお知らせは、公式 note と Zenn（JOURNAL）に掲載しています。</p>
+                <a href="#journal" class="shop-button">JOURNAL へ →</a>
             </div>
         </section>
 
-        <!-- 支援 -->
-        <section id="support" class="content-section glass-card">
-            <h2>SUPPORT</h2>
-            <p class="section-subtitle">無料ツールの開発継続とサーバー維持費へのご支援を受け付けています</p>
-
-            <div class="support-links">
-                <a href="https://github.com/sponsors/Ren9618" target="_blank" rel="noopener"
-                    class="support-btn support-sponsors">❤️ GitHub Sponsors で支援</a>
-                <a href="https://buy.stripe.com/5kQ9AU8Xva8T7tAbnj67S00" target="_blank" rel="noopener"
-                    class="support-btn support-stripe">💳 Stripe で寄付</a>
+        <!-- ABOUT -->
+        <section id="about" class="content-section">
+            <h2>ABOUT</h2>
+            <div class="about-header">
+                <h3 class="about-name">レイノワークス<span class="about-name-en">Rayno Works</span></h3>
+                <p class="about-title">個人事業主 — 2026 年 10 月 25 日開業</p>
+                <p class="about-tagline">ソフトウェアの企画・開発および販売</p>
             </div>
-            <p class="support-note">※ 支援・寄付は任意です。いただいた支援は無料ツールの開発継続とサーバー維持費に充てさせていただきます。対価となる特典等の提供はありません。</p>
+
+            <div class="about-content">
+                <p>主力製品の動画ダウンローダー「Megrab Studio」をはじめ、macOS / Windows / Android 向けのソフトウェアを自ら企画・開発し、販売・運用まで行っています。</p>
+                <p class="about-style">開発スタイルは、課題の言語化と AI エージェントの活用。仕様の決定・要件定義・検収を本人が担い、実装を AI
+                    エージェントと協働で進めています。開発体制については <a href="https://zenn.dev/ray_9618/articles/f7884033741464"
+                        target="_blank" rel="noopener">Zenn の記事</a>で公開しています。</p>
+            </div>
+
+            <div class="about-philosophy">
+                <h4>Philosophy</h4>
+                <p>Frutiger Aero や Liquid Glass が持つ「透明感・奥行き・未来への憧憬」を基調に、音楽カルチャーへのリスペクトを根底に、技術とデザインを融合させたソフトウェアづくりを続けています。</p>
+            </div>
+
+            <div class="about-links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="https://x.com/Rayno_works" target="_blank" rel="noopener">公式 X（@Rayno_works）</a><span
+                            class="link-note"> — 製品情報・サポート</span></li>
+                    <li><a href="https://github.com/Ren9618" target="_blank" rel="noopener">GitHub（@Ren9618）</a><span
+                            class="link-note"> — オープンソース・開発リポジトリ</span></li>
+                    <li><a href="https://zenn.dev/ray_9618" target="_blank" rel="noopener">Zenn（@ray_9618）</a><span
+                            class="link-note"> — 開発記事を週 2 本ペースで公開中</span></li>
+                    <li><a href="https://note.com/rayno_works" target="_blank" rel="noopener">公式 note（@rayno_works）</a><span
+                            class="link-note"> — 製品のお知らせ・開発の裏側</span></li>
+                </ul>
+            </div>
         </section>
 
-        <!-- フィードバック -->
-        <section id="feedback" class="content-section glass-card">
-            <h2>FEEDBACK</h2>
-            <p class="section-subtitle">新しい製品のご要望・機能追加のご希望・サイトへのご意見を受け付けています</p>
+        <!-- JOURNAL -->
+        <section id="journal" class="content-section">
+            <h2>JOURNAL</h2>
+            <div class="journal-grid">
+                <a href="https://note.com/rayno_works" target="_blank" rel="noopener" class="journal-card">
+                    <span class="journal-label">公式 note</span>
+                    <h3>note.com/rayno_works</h3>
+                    <p>製品のお知らせ・開発の裏側を発信しています。</p>
+                    <span class="journal-more">note を見る →</span>
+                </a>
+                <a href="https://zenn.dev/ray_9618" target="_blank" rel="noopener" class="journal-card">
+                    <span class="journal-label">Zenn</span>
+                    <h3>zenn.dev/ray_9618</h3>
+                    <p>開発記事を週 2 本ペースで公開中。開発スタイルや障害解析の知見も。</p>
+                    <span class="journal-more">Zenn を見る →</span>
+                </a>
+            </div>
+            <p class="journal-extra"><a href="https://coconala.com/contents_market/pictures/cmw9trr1w07sg6w0i5legyum4"
+                    target="_blank" rel="noopener">Coconala — AIエージェント運用テンプレート集（¥1,000）</a></p>
+        </section>
 
-            <p>新しい製品のアイデア、既存製品への機能追加のご希望、サイトへのご意見などをお寄せください。以下のフォームから受け付けています。</p>
+        <!-- CONTACT -->
+        <section id="contact" class="content-section">
+            <h2>CONTACT</h2>
 
-            <div class="support-links">
+            <div class="contact-links">
+                <a href="mailto:support@mikumiku.online" class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span class="contact-label">support@mikumiku.online</span>
+                </a>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScRdST7gj9PKMSgCOCcoiIlGiduHgHIABmbAO_RaeLWtzbs8A/viewform"
-                    target="_blank" rel="noopener" class="support-btn support-feedback">📝 フィードバックを送る</a>
+                    target="_blank" rel="noopener" class="contact-item">
+                    <span class="contact-icon">📝</span>
+                    <span class="contact-label">全体フィードバックフォーム</span>
+                </a>
             </div>
-            <p class="support-note">※ 製品ごとの不具合報告・ご質問は、各製品カード（WORKS）のフィードバック窓口の方が確実です。個人開発のため、すべてのご意見にお返事・対応できるとは限りません。</p>
-        </section>
 
-        <!-- VRChat 活動（コンパクトに圧縮） -->
-        <section id="vrchat" class="content-section glass-card">
-            <h2>VRCHAT ACTIVITY</h2>
-            <p class="section-subtitle">個人として続けている VRChat まわりの活動</p>
+            <p class="contact-note">※ お問い合わせはメールでの受付です。非同期での対応のため、内容によっては返信までお時間をいただく場合があります。</p>
+            <p class="contact-note">※ 製品の不具合・サポートは、PRODUCTS の各カードにあるフィードバック窓口（Megrab Studio = 公式サイト / Yohaku・Hodozip =
+                専用フォーム / MacUtl = GitHub Issues）をご利用ください。</p>
 
-            <div class="vrc-layout">
-                <div class="avatar-container vrc-visual" id="avatar-container">
-                    <!-- ベース動画（待機） - Safari向けHEVC Alpha優先 -->
-                    <video class="avatar-video avatar-base" id="avatar-base" autoplay muted playsinline>
-                        <source src="./assets/hevc_alpha/idle.mov" type="video/quicktime">
-                        <source src="./assets/webm/idle.webm" type="video/webm">
-                    </video>
-                    <!-- モーション動画（クロスフェード用に2つ） -->
-                    <video class="avatar-video avatar-motion" id="avatar-motion-1" muted playsinline>
-                    </video>
-                    <video class="avatar-video avatar-motion" id="avatar-motion-2" muted playsinline>
-                    </video>
-                </div>
-
-                <div class="vrc-list">
-                    <div class="vrc-card">
-                        <h4>🌐 ワールド制作</h4>
-                        <p>「0秒でV睡できるワールド」をはじめ複数のワールドを制作・公開中。「0秒でV睡できるワールド」は 7,000 Visits を達成しました。</p>
-                        <div class="work-gallery vrc-gallery">
-                            <img src="./assets/images/world/world_1.png" alt="VRChatワールドのスクリーンショット1"
-                                class="work-thumbnail">
-                            <img src="./assets/images/world/world_2.png" alt="VRChatワールドのスクリーンショット2"
-                                class="work-thumbnail">
-                            <img src="./assets/images/world/world_3.png" alt="VRChatワールドのスクリーンショット3"
-                                class="work-thumbnail">
-                        </div>
-                        <div class="shop-links">
-                            <a href="https://vrchat.com/home/world/wrld_2dc4d31a-37fe-41a5-b888-39402b844837/info"
-                                target="_blank" rel="noopener" class="shop-button vrc-button">
-                                🌐 ワールドを見る
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="vrc-card">
-                        <h4>🤖 Discord Bot</h4>
-                        <p>VoiceChannel Notification System — ボイスチャンネルへの参加・退出を通知する Discord Bot を開発・運用中。</p>
-                        <div class="shop-links">
-                            <a href="https://discord.com/oauth2/authorize?client_id=626812517427183650&permissions=8&integration_type=0&scope=bot"
-                                target="_blank" rel="noopener" class="shop-button discord-button">
-                                🤖 Botを招待
-                            </a>
-                        </div>
-                        <p class="legal-links">
-                            <a href="./terms-of-service.html">利用規約</a> ・
-                            <a href="./privacy-policy.html">プライバシーポリシー</a>
-                        </p>
-                    </div>
-
-                    <div class="vrc-card">
-                        <h4>📅 活動歴</h4>
-                        <p>2018 年 5 月に VRChat を開始し、2024 年 12 月に Trusted User に到達。そのほか、MMD 動画の制作（<a
-                                href="https://www.youtube.com/@ray_9618" target="_blank" rel="noopener">YouTube</a>）や 2024
-                            年の初音ミクファンメイドライブでの PA 担当、かつて BOOTH で公開していたアバター用ギミック・アセットの制作実績（現在は BOOTH
-                            での公開は終了しています）があります。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq" class="content-section glass-card">
-            <h2>FAQ</h2>
-
-            <div class="faq-category">
-                <h3>🏢 事業について</h3>
-
-                <details class="faq-item">
-                    <summary>レイノワークスとはどのような事業ですか？</summary>
-                    <p>代表レイノが 2026 年 10 月 25 日に開業した個人事業です。「ソフトウェアの企画・開発および販売」を主な事業として、製品の企画・開発から販売・運用までを個人の一貫した体制で行っています。
-                    </p>
-                </details>
+            <div class="faq-block">
+                <h3>FAQ</h3>
 
                 <details class="faq-item">
                     <summary>どのようなソフトウェアを開発していますか？</summary>
                     <p>主力製品は YouTube / ニコニコ動画 / BiliBili / TikTok に対応する動画ダウンローダー「Megrab
                         Studio」（macOS / Windows / Android）と、Windows 向けディスク容量ビューアー「Yohaku（よはく）」です。このほか、Windows
-                        向けのアーカイブ解凍・圧縮ソフト「Hodozip」など無料・オープンソースのツールも公開しています。詳しくは<a href="#works">WORKS</a>をご覧ください。</p>
+                        向けのアーカイブ解凍・圧縮ソフト「Hodozip」など無料・オープンソースのツールも公開しています。詳しくは<a href="#products">PRODUCTS</a>をご覧ください。</p>
                 </details>
-
-                <details class="faq-item">
-                    <summary>開発体制を教えてください。</summary>
-                    <p>課題の言語化と AI エージェントの活用を組み合わせています。仕様の決定・要件定義・検収を本人が担い、実装は AI
-                        エージェントと協働で進めることで、個人として複数プラットフォーム向けの開発を継続しています。取り組みの詳細は<a
-                            href="https://zenn.dev/ray_9618/articles/f7884033741464" target="_blank"
-                            rel="noopener">Zenn の記事</a>をご覧ください。</p>
-                </details>
-            </div>
-
-            <div class="faq-category">
-                <h3>🛒 製品の購入・ライセンス</h3>
 
                 <details class="faq-item">
                     <summary>Megrab Studio はどこで購入できますか？</summary>
@@ -611,61 +351,12 @@
                 </details>
 
                 <details class="faq-item">
-                    <summary>無料で使えるソフトはありますか？</summary>
-                    <p>あります。アーカイブ解凍・圧縮ソフト「Hodozip」（Windows / MIT ライセンス）、動画編集ソフト「MacUtl」（macOS /
-                        AGPL-3.0）、メディアキー固定ユーティリティ「Nagara」（macOS 版を公開中）、pixiv
-                        ブックマークのダウンローダー・ビューア「pixiv-bookmarks」などを GitHub で公開しています。各製品の入手方法は WORKS
-                        セクションのリンクからどうぞ。</p>
-                </details>
-            </div>
-
-            <div class="faq-category">
-                <h3>🛠 製品サポート</h3>
-
-                <details class="faq-item">
                     <summary>製品の不具合や使い方の質問はどこに連絡すればいいですか？</summary>
-                    <p>まず、ご利用中の製品の<a href="#works">公式サイト・同梱のドキュメント</a>をご確認ください。解決しない場合は、各製品の GitHub Issues
-                        または各公式サイトのサポート導線からご連絡ください。製品ごとのサポート窓口が基本となります。</p>
+                    <p>まず、ご利用中の製品の<a href="#products">公式サイト・同梱のドキュメント</a>をご確認ください。解決しない場合は、各製品の GitHub
+                        Issues または各公式サイトのサポート導線からご連絡ください。製品ごとのサポート窓口が基本となります。この FAQ
+                        にない質問は、全体フィードバックフォームと各製品のサポート導線で受け付けています。</p>
                 </details>
             </div>
-
-            <div class="faq-category">
-                <h3>💗 支援について</h3>
-
-                <details class="faq-item">
-                    <summary>無料ソフトの開発を支援するには？</summary>
-                    <p><a href="https://github.com/sponsors/Ren9618" target="_blank" rel="noopener">GitHub
-                            Sponsors</a> または <a href="https://buy.stripe.com/5kQ9AU8Xva8T7tAbnj67S00" target="_blank"
-                            rel="noopener">Stripe での寄付</a>からお願いできます。支援は任意で、対価となる特典等の提供はありません。いただいた支援は無料ツールの開発継続とサーバー維持費に充てさせていただきます。
-                    </p>
-                </details>
-            </div>
-
-            <div class="faq-category">
-                <h3>📮 お問い合わせ</h3>
-
-                <details class="faq-item">
-                    <summary>お問い合わせはどのように受け付けていますか？</summary>
-                    <p>メール（<a href="mailto:support@mikumiku.online">support@mikumiku.online</a>）での受付のみです。非同期での対応のため、ご連絡の内容によっては返信までお時間をいただきます。
-                    </p>
-                </details>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="content-section glass-card">
-            <h2>CONTACT</h2>
-            <p>お問い合わせはメールでの受付です。</p>
-
-            <div class="contact-links">
-                <a href="mailto:support@mikumiku.online" class="contact-item">
-                    <span class="contact-icon">📧</span>
-                    <span class="contact-label">support@mikumiku.online</span>
-                </a>
-            </div>
-
-            <p class="contact-note">※ 非同期での対応のため、お問い合わせの内容によっては返信までお時間をいただく場合があります。</p>
-            <p class="contact-note">※ 製品の不具合・サポートは、各製品の公式サイト・GitHub Issues をご利用ください。</p>
         </section>
     </main>
 
@@ -674,11 +365,39 @@
         <img src="" alt="拡大画像" id="lightbox-img">
     </div>
 
-    <footer class="glass-footer">
+    <footer class="site-footer">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
             <span class="icon-sun">☀️</span>
             <span class="icon-moon">🌙</span>
         </button>
+
+        <div class="footer-support">
+            <h4>Support</h4>
+            <p>無料ツールの開発継続とサーバー維持費へのご支援を受け付けています（対価となる特典等の提供はありません）。</p>
+            <div class="footer-support-links">
+                <a href="https://github.com/sponsors/Ren9618" target="_blank" rel="noopener">GitHub Sponsors</a>
+                <a href="https://buy.stripe.com/5kQ9AU8Xva8T7tAbnj67S00" target="_blank" rel="noopener">Stripe
+                    寄付</a>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <ul>
+                <li><a href="./vrchat.html">VRChat 活動</a></li>
+                <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+                <li><a href="./terms-of-service.html">利用規約</a></li>
+            </ul>
+        </div>
+
+        <!-- 商標注記（フッター集約・全文） -->
+        <div class="footer-legal">
+            <p>取得するコンテンツの著作権その他の権利は、それぞれの権利者に帰属します。「YouTube」は Google LLC
+                の商標、「ニコニコ動画」は株式会社ドワンゴの商標または登録商標、「bilibili」は上海幻電信息科技有限公司の商標、「TikTok」は ByteDance Ltd.
+                の商標です。Megrab Studio はこれらの企業・サービス提供者と提携・公認・後援関係にありません。</p>
+            <p>「Steam」は Valve Corporation の商標、「Epic Games」は Epic Games, Inc. の商標、「GOG」は GOG sp. z o.o.
+                の商標、「Riot Games」は Riot Games, Inc. の商標です。Yohaku はこれらの企業・サービス提供者と提携・公認・後援関係にありません。</p>
+        </div>
+
         <p>&copy; 2026 レイノワークス / Rayno Works. All Rights Reserved.</p>
     </footer>
 

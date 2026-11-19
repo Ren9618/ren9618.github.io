@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <linearGradient id="gradApp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A6CF7"/>
+      <stop offset="0.55" stop-color="#8A5BE0"/>
+      <stop offset="1" stop-color="#F2739D"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="240" height="240" rx="54" fill="url(#gradApp)"/>
+  <g transform="translate(33 52) scale(0.62)">
+    <line x1="72" y1="162" x2="142" y2="48" stroke="#FFFFFF" stroke-width="37" stroke-linecap="round"/>
+    <line x1="128" y1="172" x2="182" y2="82" stroke="#FFFFFF" stroke-width="37" stroke-linecap="round"/>
+    <path d="M222 16 Q225 39 248 42 Q225 45 222 68 Q219 45 196 42 Q219 39 222 16 Z" fill="#FFFFFF"/>
+  </g>
+</svg>
